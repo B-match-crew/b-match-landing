@@ -1,26 +1,143 @@
+/* Pretendard — 디자인에서 사용하는 한글 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Primary (teal) */
+  --color-primary-50: #f0fdfa;
+  --color-primary-200: #97f8e4;
+  --color-primary-300: #5bedd5;
+  --color-primary-400: #2ed8c1;
+  --color-primary-500: #11bba7;
+  --color-primary-600: #0a9789;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Accent (pink) */
+  --color-accent-50: #fff0fa;
+  --color-accent-500: #ff27b0;
+  --color-accent-600: #f0008c;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Violet — '모임장이라면' 카테고리 칩 */
+  --color-violet-50: #f5f4fe;
+  --color-violet-700: #6031d0;
+
+  /* Green — '게스트라면' 카테고리 칩 */
+  --color-green-50: #f0fdf3;
+  --color-green-700: #187d3a;
+
+  /* Text / Label */
+  --color-ink: #14181f; /* Label/Strong, Text/Primary */
+  --color-ink-normal: #232a33;
+  --color-ink-secondary: #4a5565;
+  --color-ink-tertiary: #7a8596;
+  --color-ink-assistive: #a4adba;
+  --color-ink-disable: #cdd3db;
+
+  /* Surfaces */
+  --color-secondary-main: #343d4a; /* dark band / CTA */
+  --color-bg-alt: #f7f8fa;
+  --color-gray-100: #eff1f4;
+
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, system-ui,
+    sans-serif;
+
+  /* Animations */
+  --animate-float: float 3.5s ease-in-out infinite;
+  --animate-float-slow: float 5s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+  --animate-badge-pop: badge-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-glow: glow 2.2s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.85);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes badge-pop {
+    0% {
+      transform: scale(0.4);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(17, 187, 167, 0.45);
+    }
+    50% {
+      box-shadow: 0 0 0 6px rgba(17, 187, 167, 0);
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 스크롤 등장 애니메이션 (IntersectionObserver가 .is-visible 토글) */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+/* 좌/우에서 슬라이드 등장 — 좌우 교차 피처 행에 사용 */
+.reveal[data-dir="left"] {
+  transform: translateX(-48px);
+}
+.reveal[data-dir="right"] {
+  transform: translateX(48px);
+}
+.reveal[data-dir="scale"] {
+  transform: scale(0.94);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal[data-dir] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
 }
