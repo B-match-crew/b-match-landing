@@ -8,6 +8,8 @@ type RevealProps = {
   delay?: number;
   /** 렌더링할 태그 (기본 div) */
   as?: ElementType;
+  /** 등장 방향 — up(기본) | left | right | scale */
+  dir?: "up" | "left" | "right" | "scale";
   className?: string;
 };
 
@@ -19,6 +21,7 @@ export default function Reveal({
   children,
   delay = 0,
   as: Tag = "div",
+  dir = "up",
   className = "",
 }: RevealProps) {
   const ref = useRef<HTMLElement>(null);
@@ -45,6 +48,7 @@ export default function Reveal({
   return (
     <Tag
       ref={ref}
+      data-dir={dir === "up" ? undefined : dir}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >

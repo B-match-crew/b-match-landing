@@ -16,6 +16,14 @@
   --color-accent-500: #ff27b0;
   --color-accent-600: #f0008c;
 
+  /* Violet — '모임장이라면' 카테고리 칩 */
+  --color-violet-50: #f5f4fe;
+  --color-violet-700: #6031d0;
+
+  /* Green — '게스트라면' 카테고리 칩 */
+  --color-green-50: #f0fdf3;
+  --color-green-700: #187d3a;
+
   /* Text / Label */
   --color-ink: #14181f; /* Label/Strong, Text/Primary */
   --color-ink-normal: #232a33;
@@ -102,16 +110,30 @@ body {
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
+/* 좌/우에서 슬라이드 등장 — 좌우 교차 피처 행에 사용 */
+.reveal[data-dir="left"] {
+  transform: translateX(-48px);
+}
+.reveal[data-dir="right"] {
+  transform: translateX(48px);
+}
+.reveal[data-dir="scale"] {
+  transform: scale(0.94);
+}
 .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .reveal[data-dir] {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  html {
+    scroll-behavior: auto;
   }
   *,
   *::before,
