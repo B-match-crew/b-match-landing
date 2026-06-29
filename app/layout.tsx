@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: SITE_URL },
   robots: { index: true, follow: true },
+  verification: {
+    other: {
+      "naver-site-verification": "0c7caa6f9ff6b60afde18ce6c622589713502dae",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
