@@ -1,8 +1,8 @@
 // 외부 링크 모음 — 여기만 고치면 전체에 반영됩니다.
-
-// TODO: 앱 출시 후 실제 스토어 주소로 교체 (Hero / 최종 CTA 버튼 공용)
-export const APP_STORE_URL = "#"; // TODO: Apple App Store 주소
-export const PLAY_STORE_URL = "#"; // TODO: Google Play 주소
+export const APP_STORE_URL =
+  "https://apps.apple.com/kr/app/%EB%B9%84%EB%A7%A4%EC%B9%98/id6762076567";
+export const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.jeniuslab.bmatch";
 
 // 공지 / 약관 (Notion)
 export const NOTICE_URL = "https://www.notion.so/b-match-notice-placeholder";
