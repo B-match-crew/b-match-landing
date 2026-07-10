@@ -114,7 +114,9 @@ export default function Features() {
             <>
               배드민턴이 처음이어도 괜찮아요.
               <br />
-              초보 환영 배지가 있는 모임을 찾아 편하게 참여해 보세요.
+              초보 환영 배지가 있는 모임을 찾아,{" "}
+              <br className="sm:hidden" />
+              편하게 참여해 보세요.
             </>
           }
           screen={{

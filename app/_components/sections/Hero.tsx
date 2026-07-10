@@ -22,7 +22,9 @@ export default function Hero() {
           delay={120}
           className="mx-auto mt-6 max-w-[860px] text-[15px] font-medium leading-[1.375] tracking-[-0.02em] text-[#616161] sm:text-[20px] lg:mt-10 lg:text-[32px]"
         >
-          내 위치와 실력에 맞는 최적의 모임에 게스트로 가볍게 참여해보세요.
+          내 위치와 실력에 맞는 최적의 모임에{" "}
+          <br className="sm:hidden" />
+          게스트로 가볍게 참여해보세요.
         </Reveal>
         <Reveal
           delay={220}

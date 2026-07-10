@@ -68,7 +68,9 @@ export default function Matching() {
             <>
               내 주변 모임 일정을 확인해 보세요.
               <br />
-              부담없이 게스트로 먼저 경험해보고, 딱 맞는 모임을 찾을 수 있어요.
+              부담없이 게스트로 먼저 경험해보고,{" "}
+              <br className="sm:hidden" />
+              딱 맞는 모임을 찾을 수 있어요.
             </>
           }
           from="/icons/travel_explore.svg"
