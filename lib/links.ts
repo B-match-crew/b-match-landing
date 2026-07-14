@@ -5,7 +5,7 @@ export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.jeniuslab.bmatch";
 
 // 공지 / 약관 (Notion)
-export const NOTICE_URL = "https://www.notion.so/b-match-notice-placeholder";
+export const NOTICE_URL = "https://dent-sting-122.notion.site/37f6420bcafe80bfa479ec279d1b60b0";
 export const TERMS_URL =
   "https://www.notion.so/3276420bcafe80219181ccd549716546";
 export const PRIVACY_URL =
