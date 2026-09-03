@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
-import Reveal from "@/app/_components/Reveal";
+import { cn } from "@/src/shared/lib/cn";
+import Reveal from "@/src/shared/ui/Reveal";
 
 export type Screen = { src: string; alt: string; w: number; h: number };
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { NOTICE_URL } from "@/lib/links";
+import { NOTICE_URL } from "@/src/shared/config/links";
 
 const LINKS = [
   { label: "비매치 소개", href: "#intro", external: false },

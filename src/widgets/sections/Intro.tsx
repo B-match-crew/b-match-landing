@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import Reveal from "@/app/_components/Reveal";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import Reveal from "@/src/shared/ui/Reveal";
 
 /** 인트로 — "3초 만에 찾아보세요". (Figma 2585-71548) */
 export default function Intro() {

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
+import { GTM_ID, SITE_URL } from "@/src/shared/config/site";
 
-const SITE_URL = "https://bmatch.app";
 const TITLE = "비매치 — 오늘 바로, 내 근처 배드민턴 모임에 게스트로";
 const DESCRIPTION =
   "내 위치와 실력에 맞는 배드민턴 모임에 게스트로 가볍게 참여하세요. 동호회 가입 없이, 오늘 바로 내 근처 모임을 지도·일정으로 찾고 연락까지 한 번에.";
@@ -62,16 +62,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="h-full antialiased">
-      <GoogleTagManager gtmId="GTM-5WQCW4BJ" />
+      {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
       <body className="min-h-full">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5WQCW4BJ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         {children}
       </body>
     </html>

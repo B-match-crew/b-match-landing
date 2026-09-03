@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/links";
-import Reveal from "@/app/_components/Reveal";
-import StoreButton from "@/app/_components/StoreButton";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import { APP_STORE_URL, PLAY_STORE_URL } from "@/src/shared/config/links";
+import Reveal from "@/src/shared/ui/Reveal";
+import StoreButton from "@/src/shared/ui/StoreButton";
 
 /** 최종 CTA (민트) — 로고 + 스토어 버튼. (Figma 2601-8394) */
 export default function FinalCta() {
