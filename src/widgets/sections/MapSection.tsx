@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import FeatureRow from "@/app/_components/FeatureRow";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import FeatureRow from "@/src/shared/ui/FeatureRow";
 
 /** 지도 섹션. (Figma 2585-71841) */
 export default function MapSection() {

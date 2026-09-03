@@ -1,5 +1,29 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## 구조
+
+Feature-Sliced Design 의 **얇은 판**을 쓴다. 어드민(b-match-admin)과 같은 기조지만
+층이 셋뿐이다:
+
+```
+src/
+├── app/       Next 라우트 · 레이아웃 · 전역 스타일
+├── widgets/   페이지를 이루는 섹션 (Hero · Matching · Features …)
+└── shared/    ui(공용 조각 + shadcn kit) · config(링크·사이트 설정) · lib(cn)
+```
+
+`features/` 와 `entities/` 는 **일부러 두지 않았다.** 도메인 상태가 없는 정적
+랜딩에서 그 두 층은 빈 폴더가 된다. 필요해지는 날 추가한다.
+
+의존은 아래로만 흐른다(`shared ← widgets ← app`). eslint 가 강제한다.
+
+## 환경 변수
+
+`.env.example` 참조. 둘 다 없어도 빌드는 되지만, 프리뷰 배포에서는 넣는 편이 낫다 —
+`NEXT_PUBLIC_SITE_URL` 이 없으면 canonical 이 프로덕션을 가리키고,
+`NEXT_PUBLIC_GTM_ID` 를 비우면 GTM 태그를 아예 렌더하지 않는다.
+
+
 ## Getting Started
 
 First, run the development server:

@@ -1,4 +1,4 @@
-import { TERMS_URL, PRIVACY_URL } from "@/lib/links";
+import { TERMS_URL, PRIVACY_URL } from "@/src/shared/config/links";
 
 /**
  * 푸터 (Figma node 2585-71907) — 사업자 정보 / 약관 링크.

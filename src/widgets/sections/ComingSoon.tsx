@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import Reveal from "@/app/_components/Reveal";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import Reveal from "@/src/shared/ui/Reveal";
 
 const FEATURES = [
   {

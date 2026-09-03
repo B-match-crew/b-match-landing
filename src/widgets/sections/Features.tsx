@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import Reveal from "@/app/_components/Reveal";
-import FeatureRow from "@/app/_components/FeatureRow";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import Reveal from "@/src/shared/ui/Reveal";
+import FeatureRow from "@/src/shared/ui/FeatureRow";
 
 /** "게스트 참여 (30초)" 타이틀 + 4개 피처 행. (Figma 2585-71575) */
 export default function Features() {

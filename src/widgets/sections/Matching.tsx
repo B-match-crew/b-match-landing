@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import { CONTAINER } from "@/lib/ui";
-import Reveal from "@/app/_components/Reveal";
+import { cn } from "@/src/shared/lib/cn";
+import { CONTAINER } from "@/src/shared/config/layout";
+import Reveal from "@/src/shared/ui/Reveal";
 
 /** 매칭 섹션 — 모임장 ↔ 게스트 연결. (Figma 2585-71553) */
 export default function Matching() {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/shared/ui/kit/button";
 
 /** 앱스토어 / 플레이스토어 다운로드 버튼. */
 export default function StoreButton({
