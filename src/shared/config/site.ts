@@ -14,3 +14,6 @@ export const SITE_URL = "https://bmatch.app";
 
 /** GTM 컨테이너 id. */
 export const GTM_ID = "GTM-5WQCW4BJ";
+
+/** 당근마켓 광고 픽셀 id. */
+export const KARROT_PIXEL_ID = "1789033725844538001";
