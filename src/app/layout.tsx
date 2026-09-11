@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import { GTM_ID, SITE_URL } from "@/src/shared/config/site";
+import { GTM_ID, KARROT_PIXEL_ID, SITE_URL } from "@/src/shared/config/site";
+import { KarrotPixel } from "@/src/shared/ui/KarrotPixel";
 
 const TITLE = "비매치 — 오늘 바로, 내 근처 배드민턴 모임에 게스트로";
 const DESCRIPTION =
@@ -73,6 +74,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <KarrotPixel pixelId={KARROT_PIXEL_ID} />
       </body>
     </html>
   );
