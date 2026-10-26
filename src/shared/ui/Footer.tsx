@@ -16,6 +16,8 @@ export default function Footer() {
           <br />
           사업자등록번호: 168-13-02828
           <br />
+          통신판매업 신고번호: 2026-서울강남-05910
+          <br />
           대표: 석재현 | 문의: contact@bmatch.app
         </p>
 
